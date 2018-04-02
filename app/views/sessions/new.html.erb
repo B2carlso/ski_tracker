@@ -1,0 +1,12 @@
+<h2>Log In</h2>
+
+<%= form_for :user do |f| %>
+    First name: <%= f.text_field :name %>
+    <br>
+    Last name : <%= f.text_field :email%>
+    <br>
+    Password: <%= f.text_field :password%>
+    <br>
+    <%= f.submit "Log In" %>
+
+<% end %>

@@ -7,9 +7,9 @@ class SessionsController < ApplicationController
      if params[:user] == nil || params[:user].empty?
        redirect_to sessions_new_path
      else
-     #elsif params[:user]
-       #return head(:forbidden) unless params[:password] == @user.password
-       #session[:user_id] = @user.id
+     elsif params[:user]
+       return head(:forbidden) unless params[:password] == @user.password
+       session[:user_id] = @user.id
        redirect_to user_path(@user)
      end
    end

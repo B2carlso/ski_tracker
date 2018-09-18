@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   root 'static_pages#home'
   get    '/signin',   to: 'sessions#new'
   post   '/signin',   to: 'sessions#create'
-
+  post '/users', to:'users#create'
   resources :users
 end
